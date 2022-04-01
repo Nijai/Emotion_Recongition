@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Recognition from Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+	
+  </head>
+  <body>
+    <header class="navbar-wrapper">
+      <h1 class="brand-name">Emotion Recognition from Speech</h1>
+      <nav class="nav-items-wrapper">
+        <li class="nav-link-item"><a href="#">Home</a></li>
+        <li class="nav-link-item"><a href="#">About</a></li>
+      </nav>
+    </header>
+    <main>
+      <div class="input-container">
+	  <img class="bg-img" src="https://cdn.dribbble.com/users/982548/screenshots/4773913/vr.gif" />
+        <form class="form"  action = "/success" method = "post" enctype="multipart/form-data">
+		  <label for="audio-input">
+            <input
+              id="audio-input"
+              class="audio-input"
+              type="file"
+			  name = "file"
+              accept="audio/*"
+              style="display: none"
+            />
+            <div class="upload-file-wrapper">
+              <span class="material-icons" id="microphone-icon"> keyboard_voice </span>
+              <span>Click Here to Upload Audio File</span>
+            </div>
+          </label>
+		  
+          <button class="submit-btn" type="submit" value="Upload">Recognize Emotion</button >
+		  <!-- input type=submit value=Upload -->
+		  
+		</form>
+      </div>
+	  
+
+    </main>
+	
+  </body>
+</html>
